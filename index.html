@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tu taller de frenos en Querétaro | MASTERBRAKES</title>
+  <meta name="description" content="MASTERBRAKES, especialistas en frenos en Querétaro. Atención profesional, rápida y confiable para resolver problemas de frenado y devolver seguridad a tu auto. Cotiza tu servicio hoy.">
+  <meta name="keywords" content="frenos en Querétaro, soluciones de frenos, taller de frenos, taller especializado en frenos, balatas, discos de freno, calipers, diagnóstico de frenos, mantenimiento automotriz, MASTERBRAKES">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#0e1110">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:title" content="Tu taller de frenos en Querétaro | MASTERBRAKES">
+  <meta property="og:description" content="MASTERBRAKES, especialistas en frenos en Querétaro. Atención profesional, rápida y confiable. Cotiza tu servicio hoy.">
+  <meta property="og:image" content="images/new-logo-premium.png">
+  <meta property="og:image:alt" content="MASTERBRAKES Premium">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tu taller de frenos en Querétaro | MASTERBRAKES">
+  <meta name="twitter:description" content="MASTERBRAKES, especialistas en frenos en Querétaro. Atención profesional, rápida y confiable. Conoce el taller y cotiza tu servicio hoy.">
+  <meta name="twitter:image" content="images/new-logo-premium.png">
+  <link rel="icon" type="image/png" href="images/new-logo-emblem.png">
+
+  <style>
+    :root{--bg:#070808;--panel:#0e1110;--panel2:#121514;--text:#f5f7f6;--muted:#aeb5b1;--accent:#caff00;--line:#27302b;--max:1180px;--radius:20px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:radial-gradient(circle at top right,rgba(202,255,0,.06),transparent 26%),radial-gradient(circle at bottom left,rgba(255,255,255,.035),transparent 22%),var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.55;overflow-x:hidden}
+    body.intro-lock{overflow:hidden}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    button,input,select,textarea{font:inherit}
+    .container{width:min(var(--max),calc(100% - 32px));margin:auto}
+
+    .intro{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;background:#0d100f;animation:introHide .8s ease 2.15s forwards}
+    .intro-logo{width:min(760px,72vw);animation:logoReveal 1.35s ease both,logoFade 1s ease 1.2s forwards;filter:drop-shadow(0 12px 34px rgba(0,0,0,.35))}
+    @keyframes logoReveal{0%{opacity:0;transform:scale(.92)}100%{opacity:1;transform:scale(1)}}
+    @keyframes logoFade{0%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1.08)}}
+    @keyframes introHide{to{opacity:0;visibility:hidden;pointer-events:none}}
+
+    .topbar{position:sticky;top:0;z-index:50;background:linear-gradient(90deg,rgba(8,10,9,.82),rgba(12,15,13,.92));backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.06);box-shadow:0 14px 32px rgba(0,0,0,.18)}
+    .nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:22px;position:relative}
+    .brand{display:flex;align-items:center;gap:12px;min-width:220px}.brand img{width:58px;height:58px;object-fit:contain;filter:drop-shadow(0 10px 24px rgba(202,255,0,.14))}.brand-copy{display:flex;flex-direction:column;line-height:1}.brand-copy strong{font-size:18px;letter-spacing:.08em}.brand-copy span{font-size:12px;letter-spacing:.36em;text-transform:uppercase;color:var(--accent);margin-top:5px}.menu-toggle{display:none;width:48px;height:48px;border:1px solid rgba(202,255,0,.35);border-radius:14px;background:rgba(255,255,255,.03);padding:0;align-items:center;justify-content:center;flex-direction:column;gap:5px;cursor:pointer}.menu-toggle span{width:21px;height:2px;background:#fff;border-radius:999px;transition:.2s}.menu-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}.menu-toggle.open span:nth-child(2){opacity:0}.menu-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .menu{display:flex;gap:23px;align-items:center;font-size:12px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;flex-wrap:wrap;justify-content:flex-end}
+    .menu a{opacity:.92;position:relative}.menu a:not(.btn):after{content:"";position:absolute;left:0;bottom:-10px;width:0;height:2px;background:var(--accent);transition:.25s}.menu a:hover{color:var(--accent)}.menu a:not(.btn):hover:after{width:100%}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 22px;border:1px solid rgba(202,255,0,.72);font-weight:900;text-transform:uppercase;letter-spacing:.05em;font-size:12px;transition:.25s;cursor:pointer;border-radius:14px;box-shadow:0 8px 24px rgba(0,0,0,.16)}
+    .btn.primary{background:linear-gradient(135deg,#d6ff12 0%,#b7e300 100%);color:#080a08;box-shadow:0 12px 26px rgba(183,227,0,.22)}.btn.ghost{background:rgba(255,255,255,.03);border-color:rgba(202,255,0,.5)}.btn:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(0,0,0,.22)}
+
+    .hero{min-height:780px;display:grid;align-items:center;position:relative;overflow:hidden;padding:34px 0 20px}
+    .hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 78% 22%,rgba(202,255,0,.16),transparent 16%),radial-gradient(circle at 18% 80%,rgba(202,255,0,.08),transparent 20%),linear-gradient(90deg,rgba(5,6,6,.92) 0%,rgba(5,6,6,.7) 38%,rgba(5,6,6,.22) 100%),url("images/hero-masterbrakes.jpg") center/cover no-repeat;filter:saturate(1.02) contrast(1.05)}
+    .hero:after{content:"";position:absolute;inset:auto 0 0;height:150px;background:linear-gradient(transparent,var(--bg))}
+    .hero-floating{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+    .hero-orbit{position:absolute;opacity:.1;filter:drop-shadow(0 12px 28px rgba(202,255,0,.16));animation:heroFloat 16s ease-in-out infinite}
+    .hero-orbit.o1{width:180px;right:9%;top:14%;animation-delay:0s}
+    .hero-orbit.o2{width:94px;left:5%;bottom:18%;opacity:.06;animation-delay:-5s}
+    .hero-orbit.o3{width:122px;right:42%;top:11%;opacity:.05;animation-delay:-9s}
+    .hero-glow{position:absolute;border-radius:50%;filter:blur(22px);animation:glowPulse 8s ease-in-out infinite}
+    .hero-glow.g1{width:220px;height:220px;right:14%;top:24%;background:radial-gradient(circle,rgba(202,255,0,.14),transparent 68%)}
+    .hero-glow.g2{width:160px;height:160px;left:6%;bottom:16%;background:radial-gradient(circle,rgba(255,255,255,.08),transparent 70%);animation-delay:-3s}
+    .hero-line{position:absolute;height:1px;background:linear-gradient(90deg,transparent,rgba(202,255,0,.4),transparent);transform:rotate(-18deg);opacity:.28}
+    .hero-line.l1{width:360px;right:10%;bottom:18%}
+    .hero-line.l2{width:260px;left:4%;top:22%;opacity:.16}
+    @keyframes heroFloat{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-18px) rotate(4deg)}}
+    @keyframes glowPulse{0%,100%{transform:scale(1);opacity:.88}50%{transform:scale(1.08);opacity:.45}}
+    .hero .container{position:relative;z-index:2}
+    .eyebrow,.kicker{color:var(--accent);font-weight:900;letter-spacing:.16em;text-transform:uppercase;font-size:12px}
+    h1{font-size:clamp(46px,6.2vw,84px);line-height:.92;margin:14px 0 22px;max-width:760px;letter-spacing:-.045em;text-transform:uppercase}
+    h1 span,h2 span{color:var(--accent)}
+    .lead{font-size:clamp(18px,1.9vw,23px);max-width:650px;color:#eef2ef}
+    .hero-copy{max-width:760px;padding:38px 36px;border:1px solid rgba(255,255,255,.08);border-radius:28px;background:linear-gradient(135deg,rgba(10,12,11,.8),rgba(16,20,18,.58));backdrop-filter:blur(14px);box-shadow:0 22px 60px rgba(0,0,0,.22), inset 0 1px 0 rgba(255,255,255,.04);position:relative;overflow:hidden}.hero-copy:before{content:"";position:absolute;inset:0 auto 0 0;width:4px;background:linear-gradient(180deg,var(--accent),transparent 80%)}.hero-copy:after{content:"";position:absolute;right:-80px;top:-80px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(202,255,0,.12),transparent 70%)}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px;align-items:center}
+    .proofs{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+    .proof{border:1px solid rgba(255,255,255,.08);background:linear-gradient(135deg,rgba(255,255,255,.04),rgba(202,255,0,.05));padding:12px 14px;font-size:12px;font-weight:800;text-transform:uppercase;border-radius:14px;backdrop-filter:blur(6px)}
+
+    section{padding:90px 0}
+    .section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:35px;position:relative}
+    h2{font-size:clamp(36px,5vw,64px);line-height:1;margin:8px 0 0;letter-spacing:-.04em;text-transform:uppercase}
+    .section-copy{color:var(--muted);max-width:640px}
+
+    .frenos-highlight{display:grid;grid-template-columns:120px 1fr;gap:22px;align-items:center;padding:26px;border:1px solid rgba(255,255,255,.08);border-radius:24px;background:linear-gradient(135deg,rgba(14,18,16,.95) 0%,rgba(23,28,25,.95) 58%,rgba(55,70,20,.82) 100%);box-shadow:0 18px 36px rgba(0,0,0,.18)}
+    .frenos-badge{display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:20px;min-height:96px;padding:12px}
+    .frenos-badge img{width:100%;max-width:146px;object-fit:contain;filter:drop-shadow(0 10px 18px rgba(0,0,0,.28))}
+    .frenos-copy h3{margin:0 0 10px;font-size:28px;text-transform:uppercase;letter-spacing:-.03em}
+    .frenos-copy p{margin:0;color:#eef2ef;font-size:15px;line-height:1.68}
+    .frenos-copy strong{color:#fff}
+
+    .services-primary,.additional-services,.gallery-videos,.gallery-photos,.process,.locations{display:grid;gap:16px}
+    .services-primary{grid-template-columns:repeat(3,1fr);margin-top:22px}
+    .additional-services{grid-template-columns:repeat(4,1fr);margin-top:18px}
+    .service,.mini-service{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:linear-gradient(180deg,#0d100f 0%,#0b0d0d 100%);position:relative;box-shadow:0 10px 28px rgba(0,0,0,.22)}
+    .service:before,.mini-service:before{content:"";position:absolute;inset:0 auto auto 0;width:100%;height:1px;background:linear-gradient(90deg,rgba(202,255,0,.35),rgba(202,255,0,0));pointer-events:none}
+    .service img{width:100%;height:182px;object-fit:cover;display:block}
+    .service-body{padding:22px 20px 22px}
+    .service h3,.mini-service h3{font-size:19px;line-height:1.05;margin:0 0 10px;text-transform:uppercase;letter-spacing:-.02em}
+    .service p,.mini-service p{color:var(--muted);margin:0 0 12px;font-size:14px}
+    .service .lead-copy,.mini-service .lead-copy{color:#f1f4f2;font-size:14px}
+    .service .lead-copy strong,.mini-service .lead-copy strong,.section-copy strong{color:#fff}
+    .service ul{padding:0;margin:0;list-style:none;color:#edf1ee;font-size:14px}
+    .service li{margin:8px 0;display:flex;align-items:flex-start;gap:9px}
+    .service li:before{content:"✓";color:var(--accent);font-weight:900;line-height:1.1;margin-top:1px}
+    .service.featured{border-color:#4f6119;box-shadow:0 0 0 1px rgba(202,255,0,.06) inset,0 10px 28px rgba(0,0,0,.24)}
+    .service.featured .service-body{background:linear-gradient(180deg,#101411,#0b0d0d)}
+    .service-icon,.mini-service .service-icon{width:48px;height:48px;border-radius:14px;display:inline-flex;align-items:center;justify-content:center;margin-bottom:14px;border:1px solid rgba(255,255,255,.08);background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(202,255,0,.14));box-shadow:inset 0 0 0 1px rgba(202,255,0,.04)}
+    .service-icon svg,.mini-service .service-icon svg{width:24px;height:24px;display:block;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+    .icon-suspension,.icon-afinacion,.icon-clutch{color:#d6ddd9}
+    .icon-otros{color:var(--accent)}
+    .objective{padding:12px 14px;margin-top:16px;border-left:2px solid var(--accent);background:#0a0d0c;color:#dfe4e1;font-size:13px;border-radius:0 12px 12px 0}
+    .mini-service{padding:20px 18px;min-height:260px}
+    .mini-service h3{font-size:18px}
+    .mini-service p{font-size:13px;line-height:1.58}
+    .mini-service .objective{font-size:12.5px;margin-top:12px}
+
+    .gallery-wrap{display:grid;gap:18px}
+    .gallery-videos{grid-template-columns:repeat(2,1fr)}
+    .gallery-photos{grid-template-columns:repeat(3,1fr)}
+    .gallery-card{overflow:hidden;border-radius:18px;position:relative;border:1px solid #26302a;background:linear-gradient(180deg,#101211,#121614);display:block;box-shadow:0 12px 28px rgba(0,0,0,.16)}
+    .gallery-photos .gallery-card{aspect-ratio:4/3}
+    .gallery-videos .gallery-card{aspect-ratio:16/9}
+    .gallery-card img,.gallery-card video{width:100%;height:100%;object-fit:cover;transition:.45s}
+    .gallery-card:hover img,.gallery-card:hover video{transform:scale(1.03)}
+    .gallery-card .label{position:absolute;left:14px;bottom:14px;background:rgba(0,0,0,.72);padding:7px 10px;font-size:11px;font-weight:900;text-transform:uppercase;z-index:2}
+    .gallery-videos .gallery-card .label{top:14px;bottom:auto}
+    .gallery-card video{pointer-events:auto;background:#070808}
+
+    .process{grid-template-columns:repeat(4,1fr)}
+    .step{border:1px solid #2b342e;border-top:2px solid var(--accent);padding:24px 18px 18px;border-radius:20px;position:relative;overflow:hidden;background:linear-gradient(180deg,rgba(7,8,8,.92),rgba(7,8,8,.86)),url("images/galeria-servicio.jpg") center/cover no-repeat;box-shadow:0 10px 22px rgba(0,0,0,.18)}
+    .step:nth-child(2){background:linear-gradient(180deg,rgba(7,8,8,.92),rgba(7,8,8,.86)),url("images/masterbrakes-frenos-disco-balatas.jpg") center/cover no-repeat}
+    .step:nth-child(3){background:linear-gradient(180deg,rgba(7,8,8,.92),rgba(7,8,8,.86)),url("images/masterbrakes-taller-vehiculo.jpg") center/cover no-repeat}
+    .step:nth-child(4){background:linear-gradient(180deg,rgba(7,8,8,.92),rgba(7,8,8,.86)),url("images/galeria-performance.jpg") center/cover no-repeat}
+    .step b{font-size:12px;color:var(--accent)}
+    .step h3{margin:7px 0;text-transform:uppercase}
+    .step p{color:#d4dad6;font-size:14px}
+
+    .locations{grid-template-columns:1fr 1fr;gap:18px}
+    .location{background:linear-gradient(180deg,rgba(9,11,10,.88),rgba(9,11,10,.72)),url("images/masterbrakes-queretaro-taller.jpg") center/cover no-repeat;border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:28px;position:relative;overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,.18)}
+    .location:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.18));pointer-events:none}
+    .location>*{position:relative;z-index:1}
+    .location.featured{background:linear-gradient(180deg,rgba(9,11,10,.84),rgba(9,11,10,.72)),url("images/hero-masterbrakes.jpg") center/cover no-repeat;border-color:rgba(202,255,0,.4);box-shadow:0 0 0 1px rgba(202,255,0,.08) inset,0 12px 30px rgba(0,0,0,.18);transform:translateY(-3px)}
+    .badge{display:inline-block;background:var(--accent);color:#090b09;padding:6px 9px;font-size:10px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+    .location h3{font-size:30px;text-transform:uppercase;margin:13px 0 8px}
+    .location p{color:#d0d6d2;margin:6px 0}
+    .location strong{color:#fff}
+    .loc-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.loc-actions .btn{padding:11px 14px}
+
+    .social-strip{margin-top:18px;padding:16px 18px;border:1px solid var(--line);border-radius:14px;background:var(--panel);display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    .social-links{display:flex;gap:10px;flex-wrap:wrap}
+    .social-link{display:inline-flex;align-items:center;gap:8px;padding:9px 12px;border:1px solid #313a34;font-size:12px;font-weight:900;text-transform:uppercase}
+    .social-link:hover{border-color:var(--accent);color:var(--accent)}
+    .social-icon{width:18px;height:18px;fill:currentColor;flex:0 0 18px}
+    .social-icon.instagram,.social-icon.tiktok{fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+    .social-icon.tiktok .fill{fill:currentColor;stroke:none}
+
+    .wa{position:fixed;right:24px;bottom:24px;z-index:60}
+    .wa a{position:relative;display:inline-flex;align-items:center;gap:10px;min-width:154px;height:64px;padding:0 23px 0 12px;border:0;border-radius:999px;background:var(--accent);color:#070908;font-size:15px;font-weight:900;letter-spacing:.01em;text-transform:none;box-shadow:0 14px 34px rgba(0,0,0,.42),0 0 0 1px rgba(202,255,0,.12);transition:transform .2s ease,box-shadow .2s ease}
+    .wa a:hover{transform:translateY(-3px) scale(1.015);box-shadow:0 18px 42px rgba(0,0,0,.5),0 0 0 1px rgba(202,255,0,.22)}
+    .wa .wa-badge{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#080a09;color:var(--accent);box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}
+    .wa .wa-icon{width:22px;height:22px;fill:currentColor}
+    .wa .wa-label{line-height:1;white-space:nowrap}
+
+    .faq{display:grid;gap:10px;max-width:950px}
+    .faq details{border:1px solid var(--line);background:#0c0f0e;border-radius:14px;padding:0 18px}
+    .faq summary{cursor:pointer;list-style:none;padding:18px 0;font-weight:900;text-transform:uppercase;font-size:13px}
+    .faq summary::-webkit-details-marker{display:none}
+    .faq summary:after{content:"+";float:right;color:var(--accent);font-size:20px}
+    .faq details[open] summary:after{content:"–"}
+    .faq p{color:var(--muted);margin:0 0 18px}
+
+    .cta{border:1px solid var(--accent);background:linear-gradient(90deg,#0d110d,#111611);border-radius:24px;padding:42px;display:flex;justify-content:space-between;gap:25px;align-items:center}
+    .cta h2{font-size:clamp(30px,4vw,52px)}
+    .quote-form{background:linear-gradient(90deg,rgba(9,11,10,.97),rgba(9,11,10,.86)),url("images/fondo-cotizacion-2.jpg") center/cover;border:1px solid #2a342d;border-radius:24px;padding:30px}
+    .form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .field{display:flex;flex-direction:column;gap:7px}
+    .field.full{grid-column:1/-1}
+    .field label{font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:#cbd1cd}
+    .field input,.field select,.field textarea{width:100%;background:#070908;color:#fff;border:1px solid #303932;padding:14px 15px;border-radius:10px;outline:none}
+    .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent)}
+    .field textarea{min-height:110px;resize:vertical}
+    .quote-live{margin:18px 0;padding:15px 17px;border:1px solid #29322d;background:#0a0d0c;border-radius:12px}
+    .quote-live strong{display:block;color:var(--accent);font-size:12px;text-transform:uppercase;letter-spacing:.08em}
+    .quote-live em{display:block;color:#d7ddd9;font-style:normal;margin-top:4px}
+    .quote-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+    .form-note{color:var(--muted);font-size:12px}
+
+    footer{padding:40px 0 100px;border-top:1px solid var(--line);color:var(--muted)}
+    .footer-grid{display:flex;justify-content:space-between;gap:30px;align-items:center}
+    .footer-brand{display:flex;align-items:center;gap:12px}.footer-brand img{width:52px;height:52px;object-fit:contain}.footer-grid .brand-copy strong{font-size:18px}.footer-grid .brand-copy span{font-size:12px}
+    .footer-social{display:flex;gap:10px;align-items:center}
+
+    @media(max-width:1100px){
+      .container{width:min(var(--max),calc(100% - 28px))}
+      .menu{gap:14px;font-size:10px}
+      .section-head{align-items:flex-start;flex-direction:column}
+      .services-primary,.additional-services{grid-template-columns:1fr 1fr}
+      .gallery-photos{grid-template-columns:1fr 1fr}
+      .gallery-videos{grid-template-columns:1fr 1fr}
+      .locations{grid-template-columns:1fr}
+      .process{grid-template-columns:1fr 1fr}
+      .hero-copy{max-width:720px}
+    }
+
+    @media(max-width:900px){
+      .menu-toggle{display:inline-flex}
+      .menu{position:absolute;top:calc(100% + 10px);left:0;right:0;display:flex;flex-direction:column;align-items:stretch;gap:0;padding:10px;border:1px solid rgba(255,255,255,.08);border-radius:18px;background:rgba(9,11,10,.98);box-shadow:0 22px 50px rgba(0,0,0,.35);opacity:0;transform:translateY(-10px);pointer-events:none;transition:.22s;z-index:80}
+      .menu.open{opacity:1;transform:translateY(0);pointer-events:auto}
+      .menu a{padding:14px 12px;border-radius:12px}
+      .menu a.btn{margin-top:8px}
+      .nav{min-height:74px}
+      .hero{min-height:680px;padding:28px 0 22px}
+      .hero-copy{max-width:100%;padding:30px 26px}
+      h1{font-size:clamp(44px,8vw,66px)}
+      .lead{font-size:18px;max-width:100%}
+      .proofs{gap:8px}
+      .frenos-highlight{grid-template-columns:1fr;padding:22px}
+      .frenos-badge{max-width:120px}
+      .services-primary,.additional-services,.gallery-videos,.gallery-photos,.locations,.process{grid-template-columns:1fr}
+      .gallery-videos .gallery-card,.gallery-photos .gallery-card{aspect-ratio:auto;min-height:220px}
+      .cta{padding:30px;display:block}
+      .cta .btn{margin-top:18px}
+      .form-grid{grid-template-columns:1fr}
+      .field.full{grid-column:auto}
+      .footer-grid{align-items:flex-start;flex-direction:column}
+    }
+
+    @media(max-width:640px){
+      .container{width:min(var(--max),calc(100% - 22px))}
+      .nav{min-height:66px}
+      .brand{min-width:auto;gap:9px}
+      .brand img{width:44px;height:44px}
+      .brand-copy strong{font-size:14px;letter-spacing:.06em}
+      .brand-copy span{font-size:9px;letter-spacing:.24em}
+      .menu-toggle{width:44px;height:44px}
+      .hero{min-height:620px;padding:22px 0 18px}
+      .hero:before{background:radial-gradient(circle at 76% 18%,rgba(202,255,0,.14),transparent 18%),linear-gradient(180deg,rgba(5,6,6,.78),rgba(5,6,6,.94)),url("images/masterbrakes-taller-vehiculo.jpg") center/cover}
+      .hero-copy{padding:24px 18px;border-radius:22px}
+      h1{font-size:clamp(38px,12vw,52px);line-height:.96}
+      .eyebrow,.kicker{font-size:10px;letter-spacing:.12em}
+      .lead{font-size:16px;line-height:1.55}
+      .hero-orbit.o1{width:88px;right:3%;top:12%}
+      .hero-orbit.o2{width:58px;left:2%;bottom:15%}
+      .hero-orbit.o3{display:none}
+      .hero-glow.g1{width:140px;height:140px;right:6%;top:18%}
+      .hero-glow.g2{display:none}
+      section{padding:54px 0}
+      .section-head{display:block;margin-bottom:26px}
+      .section-copy{max-width:none}
+      .hero-actions,.loc-actions,.quote-actions{flex-direction:column;align-items:stretch}
+      .hero-actions .btn,.loc-actions .btn,.quote-actions .btn{width:100%}
+      .proofs{display:grid;grid-template-columns:1fr 1fr}
+      .proof{text-align:center;font-size:10px;padding:10px 8px}
+      .frenos-highlight{padding:18px}
+      .frenos-copy h3{font-size:24px}
+      .frenos-copy p{font-size:14px}
+      .service img{height:175px}
+      .service-body{padding:20px 18px}
+      .mini-service{padding:18px}
+      .gallery-wrap{gap:14px}
+      .gallery-videos .gallery-card,.gallery-photos .gallery-card{min-height:200px}
+      .quote-form{padding:20px}
+      .field input,.field select,.field textarea{font-size:16px}
+      .wa{right:10px;bottom:10px}
+      .wa a{min-width:136px;height:54px;padding:0 16px 0 10px}
+      .wa .wa-badge{width:36px;height:36px}
+      .wa .wa-icon{width:18px;height:18px}
+      .intro-logo{width:86vw}
+    }
+
+    @media(max-width:420px){
+      h1{font-size:36px}
+      .lead{font-size:15.5px}
+      .proofs{grid-template-columns:1fr}
+      .gallery-videos .gallery-card,.gallery-photos .gallery-card{min-height:185px}
+      .location,.quote-form,.step,.service,.mini-service{border-radius:18px}
+      .cta{padding:24px 18px}
+      .social-strip{padding:14px}
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"AutoRepair",
+    "name":"MASTERBRAKES",
+    "description":"MASTERBRAKES, especialistas en frenos en Querétaro. Atención profesional, rápida y confiable para tu vehículo.",
+    "areaServed":"Querétaro, Querétaro, México",
+    "sameAs":["https://www.facebook.com/masterbrakes/"],
+    "department":[
+      {"@type":"AutoRepair","name":"MASTERBRAKES Sombrerete","telephone":"+52 442 813 3715","address":{"@type":"PostalAddress","streetAddress":"Av. Cerro Sombrerete 1150","addressLocality":"Santiago de Querétaro","addressRegion":"QRO","postalCode":"76125","addressCountry":"MX"}},
+      {"@type":"AutoRepair","name":"MASTERBRAKES Pie de la Cuesta","telephone":"+52 442 186 8438","address":{"@type":"PostalAddress","streetAddress":"Av. Pie de la Cuesta 334","addressLocality":"Santiago de Querétaro","addressRegion":"QRO","postalCode":"76148","addressCountry":"MX"}}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"¿Por qué mi auto vibra al frenar?","acceptedAnswer":{"@type":"Answer","text":"La vibración puede relacionarse con el estado de discos, balatas u otros componentes. Lo recomendable es revisar el sistema para identificar la causa y atenderla antes de que avance el desgaste."}},
+    {"@type":"Question","name":"¿Por qué mis frenos hacen ruido?","acceptedAnswer":{"@type":"Answer","text":"Un ruido puede aparecer por desgaste, condición de balatas, discos u otros componentes. Un diagnóstico permite determinar qué necesita el vehículo."}},
+    {"@type":"Question","name":"¿Por qué el pedal de freno se siente diferente?","acceptedAnswer":{"@type":"Answer","text":"Cambios en la sensación del pedal son una señal para revisar el sistema de frenado y determinar la causa antes de continuar con el uso normal del vehículo."}},
+    {"@type":"Question","name":"¿Cuándo conviene revisar la suspensión?","acceptedAnswer":{"@type":"Answer","text":"Cuando aparecen vibraciones, ruidos, desgaste irregular de las llantas o pérdida de estabilidad. Revisarla oportunamente ayuda a detectar desgaste en sus componentes."}},
+    {"@type":"Question","name":"¿Qué hace una afinación?","acceptedAnswer":{"@type":"Answer","text":"Una afinación ayuda a conservar el buen funcionamiento del motor y detectar oportunamente componentes que requieren atención. El mantenimiento preventivo puede ayudar a evitar fallas y pérdida de rendimiento."}},
+    {"@type":"Question","name":"¿Qué señales indican desgaste del clutch?","acceptedAnswer":{"@type":"Answer","text":"Dificultades para cambiar velocidades, vibraciones o pérdida de respuesta pueden aparecer cuando el clutch presenta desgaste y requiere revisión."}},
+    {"@type":"Question","name":"¿Atienden otros problemas del vehículo?","acceptedAnswer":{"@type":"Answer","text":"Sí. MASTERBRAKES puede revisar tu caso y orientarte sobre la solución adecuada, desde mantenimiento preventivo hasta reparaciones y mejoras especializadas."}},
+    {"@type":"Question","name":"¿Cómo puedo cotizar?","acceptedAnswer":{"@type":"Answer","text":"Puedes llenar el formulario con los datos de tu vehículo, elegir sucursal y servicio y enviarlo directamente por WhatsApp."}}
+  ]}
+  </script>
+</head>
+<body class="intro-lock">
+
+  <!-- Pantalla inicial con el nuevo logo -->
+  <div class="intro" aria-hidden="true">
+    <img class="intro-logo" src="images/new-logo-premium.png" alt="MASTERBRAKES Premium">
+  </div>
+
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#inicio" aria-label="MASTERBRAKES inicio"><img src="images/new-logo-emblem.png" alt="MASTERBRAKES"><div class="brand-copy"><strong>MASTERBRAKES</strong><span>Premium</span></div></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainMenu"><span></span><span></span><span></span></button>
+      <nav class="menu" id="mainMenu" aria-label="Navegación principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#galeria">Galería</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#faq">FAQ</a>
+        <a href="#sucursales">Sucursales</a>
+        <a class="btn primary" href="#cotiza">Cotiza ya ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="hero-floating" aria-hidden="true">
+        <img class="hero-orbit o1" src="images/new-logo-emblem.png" alt="">
+        <img class="hero-orbit o2" src="images/new-logo-emblem.png" alt="">
+        <img class="hero-orbit o3" src="images/new-logo-emblem.png" alt="">
+        <span class="hero-glow g1"></span>
+        <span class="hero-glow g2"></span>
+        <span class="hero-line l1"></span>
+        <span class="hero-line l2"></span>
+      </div>
+      <div class="container">
+        <div class="hero-copy">
+          <div class="eyebrow">MASTERBRAKES QUERÉTARO</div>
+          <h1>Tu taller de<br><span>frenos</span> en<br>Querétaro.</h1>
+          <p class="lead">Brindamos <strong>atención profesional, rápida y confiable</strong> para resolver ruidos, vibraciones o pérdida de frenado. En MASTERBRAKES cuidamos tu seguridad con soluciones precisas para que tu auto vuelva a frenar como debe. <strong>Cotiza hoy.</strong></p>
+          <div class="hero-actions">
+            <a class="btn primary" href="https://wa.me/524421868438?text=Hola%20MASTERBRAKES,%20quiero%20cotizar%20mis%20frenos." target="_blank" rel="noopener">Cotiza ya ↗</a>
+            <a class="btn ghost" href="#servicios">Ver servicios</a>
+          </div>
+          <div class="proofs">
+            <span class="proof">Especialistas en frenos</span>
+            <span class="proof">Atención profesional</span>
+            <span class="proof">Respuesta rápida y precisa</span>
+            <span class="proof">Querétaro</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicios">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="kicker">Servicios de frenos</div><h2>La solución que tu auto necesita.</h2></div>
+          <p class="section-copy">Conoce nuestras líneas de servicio para tu sistema de frenado. <strong>Te orientamos desde el cambio de balatas y discos hasta soluciones premium y performance</strong>, además de otros servicios automotrices para mantener tu vehículo en excelente estado.</p>
+        </div>
+
+        <div class="frenos-highlight">
+          <div class="frenos-badge"><img src="images/new-logo-icon.png" alt="Ícono de la marca MASTERBRAKES" loading="lazy"></div>
+          <div class="frenos-copy">
+            <h3>Frenos</h3>
+            <p><strong>Seguridad en cada trayecto.</strong> El sistema de frenos es uno de los componentes más importantes de tu vehículo. Un <strong>mantenimiento adecuado de balatas, discos y líquido de frenos</strong> ayuda a conservar una respuesta de frenado eficiente y a prevenir <strong>desgaste prematuro, ruidos, vibraciones</strong> y situaciones de riesgo. <strong>Objetivo:</strong> brindarte mayor seguridad, confianza y respuesta al momento de frenar.</p>
+          </div>
+        </div>
+
+        <div class="services-primary">
+          <article class="service featured">
+            <img src="images/masterbrakes-frenos-disco-balatas.jpg" alt="Discos y balatas de freno MASTERBRAKES" loading="lazy">
+            <div class="service-body">
+              <h3>Street</h3>
+              <p class="lead-copy"><strong>Frenado confiable para el día a día.</strong></p>
+              <p>Ideal para quien busca un servicio funcional, seguro y bien ejecutado para uso cotidiano.</p>
+              <ul>
+                <li>Revisión del sistema de frenado</li>
+                <li>Cambio de balatas y discos</li>
+                <li>Líquido y componentes de freno</li>
+              </ul>
+            </div>
+          </article>
+          <article class="service">
+            <img src="images/masterbrakes-taller-vehiculo.jpg" alt="Vehículo atendido en taller MASTERBRAKES" loading="lazy">
+            <div class="service-body">
+              <h3>Premium</h3>
+              <p class="lead-copy"><strong>Mayor nivel de componentes y atención para tu vehículo.</strong></p>
+              <p>Enfoque pensado para quienes desean un servicio más completo, con mejor configuración y mayor detalle técnico.</p>
+              <ul><li>Diagnóstico integral</li><li>Componentes de mayor especificación</li><li>Configuración orientada a seguridad y respuesta</li></ul>
+            </div>
+          </article>
+          <article class="service">
+            <img src="images/masterbrakes-caliper-performance.jpg" alt="Caliper de performance MASTERBRAKES" loading="lazy">
+            <div class="service-body">
+              <h3>Custom</h3>
+              <p class="lead-copy"><strong>Mejora y personaliza el sistema de frenado de tu auto.</strong></p>
+              <p>La opción para quienes quieren un sistema con presencia visual, upgrades y una respuesta más especializada.</p>
+              <ul><li>Pintura de calipers</li><li>Discos perforados y upgrades</li><li>Conversiones y sistemas Big Brake</li></ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="additional-services" aria-label="Servicios adicionales">
+          <article class="mini-service">
+            <div class="service-icon icon-suspension" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M9 4.5h6"></path><path d="M9 19.5h6"></path><path d="M9 7.5h6"></path><path d="M9 16.5h6"></path><path d="M9 10.5h6"></path><path d="M9 13.5h6"></path><path d="M10 4.5v15"></path><path d="M14 4.5v15"></path></svg>
+            </div><h3>Suspensión</h3><p class="lead-copy">Estabilidad, comodidad y seguridad.</p>
+            <p>La suspensión mantiene el vehículo estable y ayuda a absorber las irregularidades del camino. Revisarla oportunamente permite detectar desgaste en sus componentes y prevenir vibraciones, ruidos, desgaste irregular de las llantas y pérdida de estabilidad.</p>
+            <div class="objective"><strong>Objetivo:</strong> mantener una conducción estable, cómoda y segura.</div>
+          </article>
+          <article class="mini-service">
+            <div class="service-icon icon-afinacion" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M13 6l5 5"></path><path d="M11 8l5 5"></path><path d="M4.5 19.5l5.2-1.4 8.4-8.4-3.8-3.8-8.4 8.4z"></path><path d="M14 4l2-2"></path></svg>
+            </div><h3>Afinación</h3><p class="lead-copy">Mantenimiento para mantener tu vehículo en forma.</p>
+            <p>Una afinación ayuda a conservar el buen funcionamiento del motor y detectar oportunamente componentes que requieren atención. Realizarla de manera preventiva puede ayudar a evitar fallas, consumo innecesario de combustible y pérdida de rendimiento.</p>
+            <div class="objective"><strong>Objetivo:</strong> mantener un funcionamiento eficiente y confiable.</div>
+          </article>
+          <article class="mini-service">
+            <div class="service-icon icon-clutch" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><path d="M12 2.8v3"></path><path d="M12 18.2v3"></path><path d="M21.2 12h-3"></path><path d="M5.8 12h-3"></path><path d="M18.4 5.6l-2.1 2.1"></path><path d="M7.7 16.3l-2.1 2.1"></path><path d="M18.4 18.4l-2.1-2.1"></path><path d="M7.7 7.7 5.6 5.6"></path></svg>
+            </div><h3>Clutch</h3><p class="lead-copy">Respuesta y funcionamiento correcto.</p>
+            <p>El clutch permite transmitir correctamente la potencia del motor hacia la transmisión. Cuando presenta desgaste pueden aparecer dificultades para cambiar velocidades, vibraciones o pérdida de respuesta.</p>
+            <div class="objective"><strong>Objetivo:</strong> conservar un cambio de velocidades suave, preciso y confiable.</div>
+          </article>
+          <article class="mini-service">
+            <div class="service-icon icon-otros" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4.5 8.5h15"></path><path d="M7.5 8.5v-2h9v2"></path><path d="M6.5 8.5v10h11v-10"></path><path d="M9 12h6"></path><path d="M9 15h4"></path></svg>
+            </div><h3>Otros servicios</h3><p class="lead-copy">Soluciones para las necesidades de tu vehículo.</p>
+            <p>Cada vehículo tiene diferentes necesidades de mantenimiento y reparación. En MASTERBRAKES podemos revisar tu caso y orientarte sobre la solución adecuada, desde mantenimiento preventivo hasta reparaciones y mejoras especializadas.</p>
+            <div class="objective"><strong>Objetivo:</strong> encontrar la solución adecuada para tu vehículo, sin complicaciones.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="kicker">Nuestro trabajo</div><h2>Calidad que puedes ver.</h2></div>
+          <a class="btn" href="https://galeria-masterbrakers.vercel.app/" target="_blank" rel="noopener">Ver galería completa ↗</a>
+        </div>
+        <div class="gallery-wrap">
+          <div class="gallery-videos">
+            <div class="gallery-card"><video controls muted loop playsinline preload="metadata" poster="images/masterbrakes-caliper-performance.jpg"><source src="videos/masterbrakes-video-1.mp4" type="video/mp4">Tu navegador no puede reproducir este video.</video><span class="label">Video · Trabajo</span></div>
+            <div class="gallery-card"><video controls muted loop playsinline preload="metadata" poster="images/masterbrakes-queretaro-taller.jpg"><source src="videos/masterbrakes-video-2.mp4" type="video/mp4">Tu navegador no puede reproducir este video.</video><span class="label">Video · Instalaciones</span></div>
+          </div>
+          <div class="gallery-photos">
+            <a class="gallery-card" href="images/masterbrakes-taller-vehiculo.jpg" target="_blank"><img src="images/masterbrakes-taller-vehiculo.jpg" alt="Taller MASTERBRAKES y vehículo en servicio" loading="lazy"><span class="label">Taller</span></a>
+            <a class="gallery-card" href="images/masterbrakes-frenos-disco-balatas.jpg" target="_blank"><img src="images/masterbrakes-frenos-disco-balatas.jpg" alt="Discos y balatas MASTERBRAKES" loading="lazy"><span class="label">Frenos</span></a>
+            <a class="gallery-card" href="images/masterbrakes-caliper-performance.jpg" target="_blank"><img src="images/masterbrakes-caliper-performance.jpg" alt="Caliper de performance" loading="lazy"><span class="label">Performance</span></a>
+            <a class="gallery-card" href="images/masterbrakes-queretaro-taller.jpg" target="_blank"><img src="images/masterbrakes-queretaro-taller.jpg" alt="Instalaciones MASTERBRAKES Querétaro" loading="lazy"><span class="label">Querétaro</span></a>
+            <a class="gallery-card" href="images/galeria-performance.jpg" target="_blank"><img src="images/galeria-performance.jpg" alt="Sistema de frenos performance MASTERBRAKES" loading="lazy"><span class="label">Custom</span></a>
+            <a class="gallery-card" href="images/galeria-servicio.jpg" target="_blank"><img src="images/galeria-servicio.jpg" alt="Servicio automotriz MASTERBRAKES" loading="lazy"><span class="label">Servicio</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="proceso">
+      <div class="container">
+        <div class="section-head"><div><div class="kicker">Servicio profesional</div><h2>Te atendemos de principio a fin.</h2></div></div>
+        <div class="process">
+          <div class="step"><b>01</b><h3>Cuéntanos</h3><p>Compártenos tu auto y el servicio que buscas.</p></div>
+          <div class="step"><b>02</b><h3>Revisamos</h3><p>Revisamos el sistema o componente para identificar lo que necesita tu auto.</p></div>
+          <div class="step"><b>03</b><h3>Te cotizamos</h3><p>Te presentamos la opción adecuada para tu vehículo y tu necesidad.</p></div>
+          <div class="step"><b>04</b><h3>Trabajamos</h3><p>Realizamos el servicio y dejamos tu sistema listo para volver a la carretera.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sucursales">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="kicker">Visítanos</div><h2>Encuentra tu sucursal.</h2></div>
+          <p class="section-copy"><strong>Sombrerete es una de nuestras sucursales principales.</strong> Elige la ubicación que te quede más cómoda, envíanos WhatsApp y agenda tu servicio.</p>
+        </div>
+        <div class="locations">
+          <article class="location featured">
+            <span class="badge">Sucursal · Sombrerete</span>
+            <h3>Sombrerete</h3>
+            <p><strong>Av. Cerro Sombrerete 1150</strong>, Balcones de San Pablo, C.P. 76125, Santiago de Querétaro, Qro.</p>
+            <p>Tel. <strong>442 813 3715</strong></p>
+            <p><strong>★ 4.4/5</strong> · 24 opiniones en Google</p>
+            <div class="loc-actions">
+              <a class="btn primary" href="https://wa.me/524428133715?text=Hola%20MASTERBRAKES,%20quiero%20cotizar%20en%20Sombrerete." target="_blank" rel="noopener">WhatsApp</a>
+              <a class="btn" href="https://maps.app.goo.gl/rmqc3MBU2NB1DA1h6" target="_blank" rel="noopener">Google · Cómo llegar</a>
+            </div>
+          </article>
+          <article class="location">
+            <span class="badge">Sucursal · Pie de la Cuesta</span>
+            <h3>Pie de la Cuesta</h3>
+            <p><strong>Av. Pie de la Cuesta 334</strong>, Nacional, C.P. 76148, Santiago de Querétaro, Qro.</p>
+            <p>Tel. <strong>442 186 8438</strong></p>
+            <p><strong>★ 4.2/5</strong> · 114 opiniones en Google</p>
+            <div class="loc-actions">
+              <a class="btn primary" href="https://wa.me/524421868438?text=Hola%20MASTERBRAKES,%20quiero%20cotizar%20en%20Pie%20de%20la%20Cuesta." target="_blank" rel="noopener">WhatsApp</a>
+              <a class="btn" href="https://www.google.com/maps/search/?api=1&query=FRENOS+MASTERBRAKES+Av.+Pie+de+la+Cuesta+334+Quer%C3%A9taro" target="_blank" rel="noopener">Google · Cómo llegar</a>
+            </div>
+          </article>
+        </div>
+        <div class="social-strip">
+          <div><strong>Conecta con MASTERBRAKES</strong><br><span style="color:var(--muted);font-size:13px">Accede directamente a nuestras redes y contacto.</span></div>
+          <div class="social-links">
+            <a class="social-link" href="https://www.facebook.com/masterbrakes/?locale=es_LA" target="_blank" rel="noopener" aria-label="Facebook MASTERBRAKES">
+              <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-3.3 0-5 1.9-5 5v3H6v4h3v4h4v-4h3l1-4h-4V9c0-.7.3-1 1-1Z"/></svg> Facebook
+            </a>
+            <a class="social-link" href="https://www.instagram.com/masterbrakes.12?stkn=bmRxODQxbGFteDVu" target="_blank" rel="noopener" aria-label="Instagram MASTERBRAKES">
+              <svg class="social-icon instagram" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg> Instagram
+            </a>
+            <a class="social-link" href="https://www.tiktok.com/@masterbrakes.12?_r=1&_t=ZS-99auoRwMFiU" target="_blank" rel="noopener" aria-label="TikTok MASTERBRAKES">
+              <svg class="social-icon tiktok" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.2 3v11.1a4.1 4.1 0 1 1-3.1-4v3.2a1.1 1.1 0 1 0 1.1 1.1V3h2Z"/><path d="M14.2 3c.6 2.3 2 3.7 4.3 4.2v3c-1.6-.2-3.1-.8-4.3-1.8V3Z"/></svg> TikTok
+            </a>
+            <a class="social-link" href="https://wa.me/524428133715?text=Hola%20MASTERBRAKES,%20quiero%20informacion%20sobre%20un%20servicio." target="_blank" rel="noopener" aria-label="WhatsApp MASTERBRAKES">
+              <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.2.3 11.7c0 2.1.6 4.1 1.6 5.9L.2 24l6.6-1.7c1.8 1 3.8 1.5 5.8 1.5h.1c6.5 0 11.7-5.2 11.7-11.7 0-3.1-1.2-6.2-3.9-8.6ZM12.6 20.1h-.1c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.9 1 1-3.8-.3-.4a8.2 8.2 0 0 1-1.3-4.4C2.6 6.3 6.9 2 12.2 2c2.6 0 5 .9 6.8 2.7a9.6 9.6 0 0 1 2.8 6.7c0 5.2-4.1 9.4-9.2 9.4Zm5.1-7c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.7.9-.8 1.1-.2.2-.3.2-.6.1-1.5-.7-2.5-1.2-3.5-2.8-.3-.5.3-.5.8-1.6.1-.2.1-.4 0-.6-.1-.2-.7-1.6-1-2.2-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1-1.1 2.4s1.1 2.8 1.2 3c.1.2 2.1 3.3 5.2 4.6 1.9.8 2.6.9 3.6.8.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.1-1.4-.1-.1-.3-.2-.6-.3Z"/></svg> WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <div class="section-head"><div><div class="kicker">Preguntas frecuentes</div><h2>Problemas que podemos <span>revisar.</span></h2></div><p class="section-copy">Resolvemos tus dudas desde las señales que presenta tu vehículo hasta el servicio que puede necesitar.</p></div>
+        <div class="faq">
+          <details><summary>¿Por qué mi auto vibra al frenar?</summary><p>La vibración puede relacionarse con el estado de discos, balatas u otros componentes. Lo recomendable es revisar el sistema para identificar la causa y atenderla antes de que avance el desgaste.</p></details>
+          <details><summary>¿Por qué mis frenos hacen ruido?</summary><p>Un ruido puede aparecer por desgaste, condición de balatas, discos u otros componentes. Un diagnóstico permite determinar qué necesita el vehículo.</p></details>
+          <details><summary>¿Por qué el pedal de freno se siente diferente?</summary><p>Cambios en la sensación del pedal son una señal para revisar el sistema de frenado y determinar la causa antes de continuar con el uso normal del vehículo.</p></details>
+          <details><summary>¿Cuándo conviene revisar la suspensión?</summary><p>Cuando aparecen vibraciones, ruidos, desgaste irregular de las llantas o pérdida de estabilidad. Revisarla oportunamente ayuda a detectar desgaste en sus componentes.</p></details>
+          <details><summary>¿Qué hace una afinación?</summary><p>Una afinación ayuda a conservar el buen funcionamiento del motor y detectar oportunamente componentes que requieren atención. El mantenimiento preventivo puede ayudar a evitar fallas y pérdida de rendimiento.</p></details>
+          <details><summary>¿Qué señales indican desgaste del clutch?</summary><p>Dificultades para cambiar velocidades, vibraciones o pérdida de respuesta pueden aparecer cuando el clutch presenta desgaste y requiere revisión.</p></details>
+          <details><summary>¿Atienden otros problemas del vehículo?</summary><p>Sí. MASTERBRAKES puede revisar tu caso y orientarte sobre la solución adecuada, desde mantenimiento preventivo hasta reparaciones y mejoras especializadas.</p></details>
+          <details><summary>¿Cómo puedo cotizar?</summary><p>Llena el formulario con los datos de tu vehículo, elige sucursal y servicio y envíalo directamente por WhatsApp.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section id="cotiza">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="kicker">Cotización</div><h2>Agenda tu servicio de frenos.</h2></div>
+          <p class="section-copy">Selecciona tu sucursal, agrega los datos de tu auto y dinos qué necesitas. <strong>Envíalo por WhatsApp y recibe atención directa.</strong></p>
+        </div>
+        <div class="quote-form">
+          <form id="quoteForm">
+            <div class="form-grid">
+              <div class="field"><label for="branch">Sucursal</label><select id="branch" required><option value="">Selecciona sucursal</option><option value="som">Sucursal · Sombrerete</option><option value="pie">Sucursal · Pie de la Cuesta</option></select></div>
+              <div class="field"><label for="brand">Marca</label><input id="brand" required placeholder="Ej. Nissan, Mazda, BMW"></div>
+              <div class="field"><label for="model">Modelo</label><input id="model" required placeholder="Ej. Versa, CX-5, Serie 3"></div>
+              <div class="field"><label for="year">Año</label><select id="year" required><option value="">Selecciona año</option></select></div>
+              <div class="field"><label for="line">Servicio</label><select id="line" required><option value="">Selecciona servicio</option><option>Frenos</option><option>Premium</option><option>Custom</option><option>Suspensión</option><option>Afinación</option><option>Clutch</option><option>Otros servicios</option></select></div>
+              <div class="field"><label for="need">¿Qué necesitas?</label><select id="need" required><option value="">Selecciona problema o servicio</option><option>Diagnóstico de frenos</option><option>Balatas</option><option>Discos</option><option>Líquido de frenos</option><option>Ruido / vibración / pedal</option><option>Mantenimiento de frenos</option><option>Suspensión</option><option>Afinación</option><option>Clutch</option><option>Otro</option></select></div>
+              <div class="field" id="otherWrap" style="display:none"><label for="other">Otro servicio</label><input id="other" placeholder="Escribe qué necesitas"></div>
+              <div class="field"><label for="name">Nombre</label><input id="name" required placeholder="Tu nombre"></div>
+              <div class="field full"><label for="details">Información adicional</label><textarea id="details" placeholder="Cuéntanos qué síntoma presenta el auto, qué quieres mejorar o cualquier detalle que nos ayude a cotizar."></textarea></div>
+            </div>
+            <div class="quote-live" id="live"><strong>Solicitud lista</strong><em>Completa los datos de tu vehículo.</em></div>
+            <div class="quote-actions"><button class="btn primary" type="submit">Cotizar por WhatsApp ↗</button><span class="form-note" id="msg">Tus datos se envían al WhatsApp de la sucursal que elijas.</span></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand"><img src="images/new-logo-emblem.png" alt="MASTERBRAKES"><div class="brand-copy"><strong>MASTERBRAKES</strong><span>Premium</span></div></div>
+      <div><strong>MASTERBRAKES</strong><br>Especialistas en frenos en Querétaro: balatas, discos, calipers, suspensión, afinación, clutch y más.</div>
+      <div class="footer-social">
+        <a class="social-link" href="https://www.facebook.com/masterbrakes/?locale=es_LA" target="_blank" rel="noopener" aria-label="Facebook MASTERBRAKES">
+          <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-3.3 0-5 1.9-5 5v3H6v4h3v4h4v-4h3l1-4h-4V9c0-.7.3-1 1-1Z"/></svg>
+        </a>
+        <a class="social-link" href="https://www.instagram.com/masterbrakes.12?stkn=bmRxODQxbGFteDVu" target="_blank" rel="noopener" aria-label="Instagram MASTERBRAKES">
+          <svg class="social-icon instagram" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a class="social-link" href="https://www.tiktok.com/@masterbrakes.12?_r=1&_t=ZS-99auoRwMFiU" target="_blank" rel="noopener" aria-label="TikTok MASTERBRAKES">
+          <svg class="social-icon tiktok" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.2 3v11.1a4.1 4.1 0 1 1-3.1-4v3.2a1.1 1.1 0 1 0 1.1 1.1V3h2Z"/><path d="M14.2 3c.6 2.3 2 3.7 4.3 4.2v3c-1.6-.2-3.1-.8-4.3-1.8V3Z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="wa">
+    <a href="https://wa.me/524428133715?text=Hola%20MASTERBRAKES,%20quiero%20informacion%20sobre%20un%20servicio." target="_blank" rel="noopener" aria-label="Cotiza ya por WhatsApp">
+      <span class="wa-badge" aria-hidden="true">
+        <svg class="wa-icon" viewBox="0 0 24 24"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.2.3 11.7c0 2.1.6 4.1 1.6 5.9L.2 24l6.6-1.7c1.8 1 3.8 1.5 5.8 1.5h.1c6.5 0 11.7-5.2 11.7-11.7 0-3.1-1.2-6.2-3.9-8.6ZM12.6 20.1h-.1c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.9 1 1-3.8-.3-.4a8.2 8.2 0 0 1-1.3-4.4C2.6 6.3 6.9 2 12.2 2c2.6 0 5 .9 6.8 2.7a9.6 9.6 0 0 1 2.8 6.7c0 5.2-4.1 9.4-9.2 9.4Zm5.1-7c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.7.9-.8 1.1-.2.2-.3.2-.6.1-1.5-.7-2.5-1.2-3.5-2.8-.3-.5.3-.5.8-1.6.1-.2.1-.4 0-.6-.1-.2-.7-1.6-1-2.2-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1-1.1 2.4s1.1 2.8 1.2 3c.1.2 2.1 3.3 5.2 4.6 1.9.8 2.6.9 3.6.8.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.1-1.4-.1-.1-.3-.2-.6-.3Z"/></svg>
+      </span>
+      <span class="wa-label">Cotiza ya</span>
+    </a>
+  </div>
+
+  <script>
+    // Retira el bloqueo del scroll cuando termina la animación inicial del nuevo logo.
+    window.setTimeout(()=>document.body.classList.remove('intro-lock'),2200);
+
+
+    // Menú adaptable para tablet y celular.
+    const menuToggle=document.getElementById('menuToggle');
+    const mainMenu=document.getElementById('mainMenu');
+    if(menuToggle && mainMenu){
+      menuToggle.addEventListener('click',()=>{
+        const isOpen=mainMenu.classList.toggle('open');
+        menuToggle.classList.toggle('open',isOpen);
+        menuToggle.setAttribute('aria-expanded',isOpen?'true':'false');
+      });
+      mainMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+        mainMenu.classList.remove('open');
+        menuToggle.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded','false');
+      }));
+    }
+
+    // Generador dinámico de años del formulario.
+    const year=document.getElementById('year');
+    for(let y=new Date().getFullYear();y>=1990;y--){const o=document.createElement('option');o.value=y;o.textContent=y;year.appendChild(o)}
+
+    // Campo condicional para otro servicio.
+    const need=document.getElementById('need'),otherWrap=document.getElementById('otherWrap'),other=document.getElementById('other');
+    need.addEventListener('change',()=>{otherWrap.style.display=need.value==='Otro'?'flex':'none';other.required=need.value==='Otro';updateLive()});
+
+    ['branch','brand','model','year','line','need','other','details','name'].forEach(id=>{
+      const el=document.getElementById(id);el.addEventListener('input',updateLive);el.addEventListener('change',updateLive)
+    });
+
+    function updateLive(){
+      const b=document.getElementById('branch').value;
+      const brand=document.getElementById('brand').value||'marca';
+      const model=document.getElementById('model').value||'modelo';
+      const y=document.getElementById('year').value||'año';
+      const l=document.getElementById('line').value||'servicio';
+      const n=need.value==='Otro'?(other.value||'otro servicio'):(need.value||'problema o servicio');
+      const branchName=b==='som'?'Sucursal · Sombrerete':b==='pie'?'Sucursal · Pie de la Cuesta':'sucursal';
+      document.getElementById('live').innerHTML='<strong>'+(b?'Solicitud para '+branchName:'Solicitud lista')+'</strong><em>'+brand+' · '+model+' · '+y+' · '+l+' · '+n+'</em>';
+    }
+
+    document.getElementById('quoteForm').addEventListener('submit',e=>{
+      e.preventDefault();
+      const branch=document.getElementById('branch').value;
+      const phone=branch==='som'?'524428133715':'524421868438';
+      const branchName=branch==='som'?'Sucursal · Sombrerete':'Sucursal · Pie de la Cuesta';
+      const brand=document.getElementById('brand').value,model=document.getElementById('model').value,y=document.getElementById('year').value;
+      const line=document.getElementById('line').value,n=need.value==='Otro'?(other.value||'Otro'):need.value;
+      const details=document.getElementById('details').value||'Sin información adicional',name=document.getElementById('name').value;
+      const msg='Hola MASTERBRAKES. Quiero cotizar.%0A%0ANombre: '+encodeURIComponent(name)+'%0AAuto: '+encodeURIComponent(brand+' '+model+' '+y)+'%0AServicio: '+encodeURIComponent(line)+'%0ANecesidad: '+encodeURIComponent(n)+'%0ASucursal: '+encodeURIComponent(branchName)+'%0ADetalles: '+encodeURIComponent(details);
+      window.open('https://wa.me/'+phone+'?text='+msg,'_blank');
+      document.getElementById('msg').textContent='Solicitud preparada. WhatsApp se abrirá con tus datos.';
+    });
+  </script>
+</body>
+</html>
