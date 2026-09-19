@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.frenosmasterbrakes.com/sitemap.xml
