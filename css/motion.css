@@ -1,0 +1,368 @@
+/* ==========================================================================
+   MASTERBRAKES · Motion layer v25
+   Capa de animaciones premium (inspirada en sitios automotrices de alto nivel).
+   Respeta la paleta existente: lime / negro carbón / blanco / dorado.
+   Se carga DESPUÉS de styles.css y no modifica contenido.
+   ========================================================================== */
+:root{
+  --mb-lime:var(--premium-lime,#c8f500);
+  --mb-ease:cubic-bezier(.16,1,.3,1);
+  --mb-dark:#0b0d0e;
+}
+
+/* ---------- 1. Intro de marca (solo 1 vez por sesión, puro CSS) ---------- */
+html.mb-intro-on::before{
+  content:"";position:fixed;inset:0;z-index:2147483000;pointer-events:none;
+  background:var(--mb-dark) url("../assets/masterbrakes-logo-light.png") center calc(50% - 18px)/min(300px,62vw) auto no-repeat;
+  animation:mbIntroCurtain 1.25s var(--mb-ease) forwards;
+}
+html.mb-intro-on::after{
+  content:"";position:fixed;left:50%;top:calc(50% + 34px);z-index:2147483001;pointer-events:none;
+  width:min(220px,46vw);height:2px;margin-left:calc(min(220px,46vw) / -2);
+  background:linear-gradient(90deg,transparent,var(--mb-lime),transparent);
+  transform-origin:left center;
+  animation:mbIntroLine 1.25s var(--mb-ease) forwards;
+}
+@keyframes mbIntroCurtain{
+  0%,48%{transform:translateY(0);clip-path:inset(0 0 0 0)}
+  100%{transform:translateY(-6%);clip-path:inset(0 0 100% 0);visibility:hidden}
+}
+@keyframes mbIntroLine{
+  0%{transform:scaleX(0);opacity:1}
+  42%{transform:scaleX(1);opacity:1}
+  60%,100%{transform:scaleX(1);opacity:0;visibility:hidden}
+}
+
+/* ---------- 2. Barra de progreso de lectura ---------- */
+.mb-progress{
+  position:fixed;left:0;top:0;z-index:200;height:3px;width:100%;pointer-events:none;
+  background:linear-gradient(90deg,var(--mb-lime),#e9ff7a 60%,var(--mb-lime));
+  transform-origin:left center;transform:scaleX(var(--mb-p,0));
+  box-shadow:0 0 12px rgba(200,245,0,.55);
+}
+
+/* ---------- 3. Header inteligente ---------- */
+.site-header{transition:transform .5s var(--mb-ease),box-shadow .35s ease,background .35s ease}
+.site-header.mb-scrolled{box-shadow:0 10px 34px rgba(0,0,0,.08)}
+.site-header.mb-hide{transform:translateY(-104%)}
+.nav-links > a,.nav-links .drop-btn{position:relative}
+.nav-links > a::after,.nav-links .drop-btn::after{
+  content:"";position:absolute;left:0;right:0;bottom:22px;height:2px;background:var(--mb-lime);
+  transform:scaleX(0);transform-origin:right center;transition:transform .45s var(--mb-ease)
+}
+.nav-links > a:hover::after,.nav-links .drop-btn:hover::after{transform:scaleX(1);transform-origin:left center}
+
+/* ---------- 4. Hero: Ken Burns + parallax + reflector ---------- */
+.hero-photo-frena img,.custom-cover-hero img,.service-hero-img img{
+  scale:1.12;translate:0 var(--mb-py,0px);
+  transition:scale 2.6s var(--mb-ease);will-change:translate,scale
+}
+.mb-ready .hero-photo-frena img,.mb-ready .custom-cover-hero img,.mb-ready .service-hero-img img{scale:1.03}
+.mb-spot{
+  position:absolute;inset:0;z-index:1;pointer-events:none;opacity:0;transition:opacity .5s ease;
+  background:radial-gradient(520px circle at var(--mb-mx,70%) var(--mb-my,40%),rgba(200,245,0,.20),transparent 60%);
+  mix-blend-mode:screen
+}
+.mb-spot-host:hover .mb-spot{opacity:1}
+.hero-copy-frena{z-index:3}
+
+/* brillo metálico que barre "seguro." */
+.hero-word--lime{position:relative}
+.hero-word--lime::after{
+  content:attr(data-mb-text);position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(110deg,transparent 0%,transparent 40%,rgba(255,255,255,.95) 50%,transparent 60%,transparent 100%);
+  background-size:250% 100%;background-position:150% 0;
+  -webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;
+  text-shadow:none;opacity:0;
+  animation:mbShine 5.5s ease-in-out 1.9s infinite
+}
+@keyframes mbShine{
+  0%{background-position:150% 0;opacity:1}
+  28%{background-position:-50% 0;opacity:1}
+  29%,100%{background-position:-50% 0;opacity:0}
+}
+
+/* indicador de scroll */
+.mb-scroll-cue{
+  position:absolute;left:50%;bottom:18px;z-index:3;width:24px;height:38px;margin-left:-12px;
+  border:2px solid rgba(255,255,255,.55);border-radius:14px;pointer-events:none;
+  opacity:0;animation:mbFadeIn .8s ease 1.8s forwards
+}
+.mb-scroll-cue::before{
+  content:"";position:absolute;left:50%;top:7px;width:4px;height:8px;margin-left:-2px;border-radius:2px;
+  background:var(--mb-lime);animation:mbCue 1.8s var(--mb-ease) infinite
+}
+@keyframes mbCue{0%{transform:translateY(0);opacity:1}70%{transform:translateY(14px);opacity:0}100%{transform:translateY(0);opacity:0}}
+@keyframes mbFadeIn{to{opacity:1}}
+
+/* ---------- 5. Eyebrows con línea que se dibuja ---------- */
+.mb-eyebrow{display:inline-flex!important;align-items:center;gap:10px}
+.mb-eyebrow .mb-line{
+  display:inline-block;width:28px;height:2px;flex:none;background:var(--mb-lime);border-radius:2px;
+  transform:scaleX(0);transform-origin:left center;transition:transform .9s var(--mb-ease) .1s
+}
+.mb-eyebrow.mb-in .mb-line{transform:scaleX(1)}
+
+/* ---------- 6. Métricas: contador + pop + línea superior ---------- */
+.stats-strip{position:relative}
+.stats-strip::before{
+  content:"";position:absolute;left:0;top:-1px;height:2px;width:100%;
+  background:linear-gradient(90deg,var(--mb-lime),rgba(200,245,0,0));
+  transform:scaleX(0);transform-origin:left center;transition:transform 1.6s var(--mb-ease)
+}
+.stats-strip.mb-in::before{transform:scaleX(1)}
+.stat b{display:inline-block}
+.stat.mb-pop b{animation:mbNumberPop .7s var(--mb-ease) both}
+@keyframes mbNumberPop{0%{transform:scale(.8)}60%{transform:scale(1.1)}100%{transform:scale(1)}}
+.stat .stat-icon{transition:transform .6s var(--mb-ease),box-shadow .6s ease}
+.stat:hover .stat-icon{transform:rotate(-12deg) scale(1.08);box-shadow:0 0 0 6px rgba(200,245,0,.12)}
+
+/* ---------- 7. Tarjetas: haz de luz giratorio + reflejo que sigue el cursor ---------- */
+@property --mb-angle{syntax:"<angle>";inherits:false;initial-value:0deg}
+.mb-beam{
+  position:absolute;inset:0;border-radius:inherit;padding:1.5px;pointer-events:none;z-index:3;
+  background:conic-gradient(from var(--mb-angle),transparent 0deg,transparent 60deg,var(--mb-lime) 100deg,transparent 140deg,transparent 360deg);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);
+  opacity:0;transition:opacity .45s ease;animation:mbBeam 3.2s linear infinite
+}
+.mb-card:hover .mb-beam,.catalog-card.featured .mb-beam{opacity:1}
+@keyframes mbBeam{to{--mb-angle:360deg}}
+.mb-glare{
+  position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:2;opacity:0;
+  background:radial-gradient(380px circle at var(--mb-mx,50%) var(--mb-my,50%),rgba(200,245,0,.13),transparent 55%);
+  transition:opacity .35s ease
+}
+.mb-card:hover .mb-glare{opacity:1}
+.catalog-card .service-icon-wrap,.included-icon,.commit .icon,.process-card .icon{transition:transform .6s var(--mb-ease)}
+.catalog-card:hover .service-icon-wrap{transform:rotate(-18deg) scale(1.06)}
+.included-card:hover .included-icon,.commit:hover .icon,.process-card:hover .icon{transform:translateY(-4px) rotate(-8deg)}
+.catalog-card .link{transition:letter-spacing .4s var(--mb-ease),color .3s ease}
+.catalog-card:hover .link{letter-spacing:.04em}
+
+/* ---------- 8. Proceso: la línea se llena con el scroll ---------- */
+.process-track.mb-track{background:var(--line,#e5e5e0)!important;overflow:visible}
+.process-track.mb-track::after{display:none!important}
+.mb-track-fill{
+  position:absolute;left:0;top:0;height:100%;width:100%;
+  transform-origin:left center;transform:scaleX(var(--mb-t,0));
+}
+.mb-track-pill{
+  position:absolute;top:50%;left:calc(var(--mb-t,0) * 100%);width:52px;height:22px;border-radius:999px;
+  background:#151719;transform:translate(-100%,-50%);box-shadow:0 0 0 4px rgba(200,245,0,.18),0 6px 18px rgba(0,0,0,.18)
+}
+.mb-track-pill::after{
+  content:"";position:absolute;right:6px;top:50%;width:8px;height:8px;margin-top:-4px;border-radius:50%;
+  background:var(--mb-lime);box-shadow:0 0 10px var(--mb-lime)
+}
+.process-card > span{transition:color .5s ease,transform .6s var(--mb-ease)}
+.process-card.mb-on > span{color:var(--mb-lime);transform:scale(1.08);text-shadow:0 0 18px rgba(200,245,0,.35)}
+.process-card.mb-on{border-color:rgba(160,202,0,.45)}
+
+/* ---------- 9. Franja de texto en movimiento ---------- */
+.mb-marquee{
+  position:relative;overflow:hidden;background:var(--mb-dark);padding:30px 0;
+  border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)
+}
+.mb-marquee::before,.mb-marquee::after{content:"";position:absolute;top:0;bottom:0;width:12%;z-index:2;pointer-events:none}
+.mb-marquee::before{left:0;background:linear-gradient(90deg,var(--mb-dark),transparent)}
+.mb-marquee::after{right:0;background:linear-gradient(-90deg,var(--mb-dark),transparent)}
+.mb-marquee-track{display:flex;width:max-content;will-change:transform}
+.mb-marquee-group{display:flex;align-items:center;flex:none}
+.mb-marquee-item{
+  font-family:'Barlow Condensed','Arial Narrow',Impact,sans-serif;font-weight:900;text-transform:uppercase;
+  font-size:clamp(46px,7vw,104px);line-height:1;letter-spacing:-.02em;white-space:nowrap;padding:0 .35em;
+  color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.32)
+}
+.mb-marquee-item.mb-solid{color:var(--mb-lime);-webkit-text-stroke:0}
+.mb-marquee-dot{width:14px;height:14px;flex:none;border-radius:50%;border:3px solid var(--mb-lime);margin:0 .4em}
+
+/* ---------- 10. Imágenes: revelado tipo cortina + zoom ---------- */
+.mb-wipe{overflow:hidden}
+.mb-wipe img{
+  clip-path:inset(100% 0 0 0);scale:1.18;
+  transition:clip-path 1.25s var(--mb-ease),scale 1.8s var(--mb-ease)
+}
+.mb-wipe.mb-in img{clip-path:inset(0 0 0 0);scale:1}
+.gallery-preview-grid a{position:relative;overflow:hidden}
+.gallery-preview-grid a::after{
+  content:"Ver galería ↗";position:absolute;inset:auto 14px 14px 14px;padding:10px 14px;border-radius:999px;
+  background:rgba(11,13,14,.78);backdrop-filter:blur(6px);color:var(--mb-lime);
+  font-size:11px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;text-align:center;
+  transform:translateY(140%);transition:transform .55s var(--mb-ease)
+}
+.gallery-preview-grid a:hover::after{transform:translateY(0)}
+.gallery-preview-grid a img{transition:clip-path 1.25s var(--mb-ease),scale 1.8s var(--mb-ease),filter .6s ease}
+.gallery-preview-grid a:hover img{scale:1.07;filter:saturate(1.15)}
+.custom-image{overflow:hidden}
+.custom-image img{translate:0 var(--mb-py,0px);scale:1.12}
+
+/* ---------- 11. Botones: respiración + magnetismo ---------- */
+.hero-actions .btn-gold,.desktop-cta,.quote-form button[type=submit],.service-final-cta .btn-gold{animation:mbBreath 2.8s ease-in-out infinite}
+@keyframes mbBreath{0%,100%{box-shadow:0 0 0 0 rgba(200,245,0,0)}50%{box-shadow:0 0 0 7px rgba(200,245,0,.16)}}
+.btn{translate:var(--mb-bx,0px) var(--mb-by,0px)}
+.btn.mb-magnet{transition:transform .25s ease,translate .35s var(--mb-ease),box-shadow .25s ease,background .25s ease,color .25s ease}
+
+/* ---------- 12. Reseñas: estrellas que destellan + comillas ---------- */
+.mb-star{display:inline-block;opacity:0;transform:scale(.6)}
+.mb-stars-in .mb-star{animation:mbTwinkle .6s var(--mb-ease) forwards;animation-delay:calc(var(--i) * 90ms + .15s)}
+@keyframes mbTwinkle{0%{opacity:0;transform:scale(.6) rotate(-20deg)}60%{opacity:1;transform:scale(1.25) rotate(6deg)}100%{opacity:1;transform:scale(1) rotate(0)}}
+.quote-mark{display:inline-block;transition:transform 1s var(--mb-ease)}
+.quote-card.visible .quote-mark,.quote-card.mb-in .quote-mark{animation:mbNumberPop .9s var(--mb-ease) .3s both}
+
+/* ---------- 13. Entradas con desenfoque para párrafos de secciones oscuras ---------- */
+.mb-blur{opacity:0;filter:blur(8px);transform:translateY(16px);transition:opacity 1s var(--mb-ease),filter 1s var(--mb-ease),transform 1s var(--mb-ease)}
+.mb-blur.mb-in{opacity:1;filter:blur(0);transform:none}
+.custom-list > div{transition-delay:calc(var(--i,0) * 120ms)}
+.custom-list b{display:inline-block;transition:transform .6s var(--mb-ease)}
+.custom-list > div:hover b{transform:scale(1.15) rotate(-6deg)}
+
+/* ---------- 14. WhatsApp flotante con pulso ---------- */
+.wa-float::before,.wa-direct-float::before{
+  content:"";position:absolute;inset:0;border-radius:50%;background:#25d366;z-index:-1;
+  animation:mbPing 2.4s cubic-bezier(0,0,.2,1) infinite
+}
+@keyframes mbPing{0%{transform:scale(1);opacity:.55}75%,100%{transform:scale(1.7);opacity:0}}
+
+/* ---------- 15. FAQ: indicador animado ---------- */
+.faq-item{transition:border-color .35s ease,background .35s ease}
+.faq-item.open{border-color:rgba(160,202,0,.5)}
+
+/* ---------- 16. Footer ---------- */
+.mb-js .site-footer .footer-grid > *{opacity:0;transform:translateY(24px);transition:opacity .9s var(--mb-ease),transform .9s var(--mb-ease);transition-delay:calc(var(--i,0) * 110ms)}
+.site-footer.mb-in .footer-grid > *{opacity:1;transform:none}
+.site-footer .socials a{transition:transform .4s var(--mb-ease)}
+.site-footer .socials a:hover{transform:translateY(-4px) rotate(-6deg)}
+
+/* ---------- Accesibilidad: sin movimiento si el usuario lo pide ---------- */
+@media (prefers-reduced-motion: reduce){
+  html.mb-intro-on::before,html.mb-intro-on::after{display:none}
+  .mb-beam,.mb-scroll-cue,.wa-float::before,.wa-direct-float::before,.hero-word--lime::after{animation:none!important;display:none}
+  .hero-actions .btn-gold,.desktop-cta,.quote-form button[type=submit],.service-final-cta .btn-gold{animation:none}
+  .mb-wipe img,.hero-photo-frena img,.custom-cover-hero img,.service-hero-img img,.custom-image img{clip-path:none!important;scale:1!important;translate:none!important;transition:none!important}
+  .mb-blur,.site-footer .footer-grid > *{opacity:1!important;filter:none!important;transform:none!important}
+  .mb-star{opacity:1;transform:none;animation:none!important}
+  .mb-marquee-track{transform:none!important}
+  .btn{translate:none!important}
+}
+
+/* ==========================================================================
+   v26 · Secciones PRO: anatomía interactiva, proyectos en scroll horizontal,
+   taller en video, cursor personalizado y transiciones entre páginas.
+   ========================================================================== */
+.mb-sec-dark{background:var(--mb-dark);color:#fff;position:relative;overflow:hidden}
+.mb-sec-dark .eyebrow{color:#aab4ad}
+.mb-sec-dark .section-title{color:#fff}
+.mb-sec-dark .mb-lead{color:#aeb6b1}
+.mb-lead{max-width:520px;font-size:16px;color:var(--muted)}
+.mb-glow{position:absolute;pointer-events:none;border-radius:50%;filter:blur(70px);background:rgba(200,245,0,.16)}
+
+/* ---------- Anatomía del freno ---------- */
+.mb-anatomy{padding:96px 0 84px}
+.mb-anatomy-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:34px}
+.mb-anatomy-stage{position:relative;border-radius:30px;overflow:hidden;border:1px solid rgba(200,245,0,.14);background:#050606;aspect-ratio:16/9}
+.mb-anatomy-stage img{width:100%;height:100%;object-fit:cover;scale:1.06;transition:scale 1.6s var(--mb-ease),filter .6s ease}
+.mb-anatomy-stage.mb-in img{scale:1}
+.mb-anatomy-stage.mb-has-active img{filter:brightness(.72)}
+.mb-hotspot{
+  position:absolute;left:var(--x);top:var(--y);z-index:3;width:46px;height:46px;margin:-23px 0 0 -23px;border-radius:50%;
+  border:0;background:transparent;cursor:pointer;display:grid;place-items:center;opacity:0;scale:.4;
+  transition:opacity .6s var(--mb-ease),scale .6s var(--mb-ease);transition-delay:calc(var(--i) * 160ms + .5s)
+}
+.mb-anatomy-stage.mb-in .mb-hotspot{opacity:1;scale:1}
+.mb-hotspot::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--mb-lime);animation:mbPing 2.2s cubic-bezier(0,0,.2,1) infinite}
+.mb-hotspot span{position:relative;width:24px;height:24px;border-radius:50%;background:var(--mb-lime);color:#0b0d0b;font:900 12px/24px Inter,sans-serif;box-shadow:0 0 22px rgba(200,245,0,.6);transition:transform .4s var(--mb-ease)}
+.mb-hotspot:hover span,.mb-hotspot.active span{transform:scale(1.25)}
+.mb-hotspot:focus-visible{outline:2px solid #fff;outline-offset:4px}
+.mb-anatomy-panels{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+.mb-part{padding:24px 24px 22px;border-radius:22px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.03);cursor:pointer;transition:border-color .4s ease,background .4s ease,transform .5s var(--mb-ease)}
+.mb-part b{display:flex;align-items:center;gap:10px;font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;font-size:28px;line-height:1;letter-spacing:-.01em}
+.mb-part b i{font-style:normal;display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:rgba(200,245,0,.14);color:var(--mb-lime);font:900 12px Inter,sans-serif}
+.mb-part p{margin:10px 0 12px;color:#aeb6b1;font-size:14px}
+.mb-part small{color:var(--mb-lime);font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+.mb-part.active,.mb-part:hover{border-color:rgba(200,245,0,.5);background:rgba(200,245,0,.06);transform:translateY(-4px)}
+
+/* ---------- Proyectos en scroll horizontal ---------- */
+.mb-showcase{--mb-h:0px;height:calc(100vh + var(--mb-h))}
+.mb-showcase-sticky{position:sticky;top:0;height:100vh;display:flex;flex-direction:column;justify-content:center;overflow:hidden;padding:40px 0}
+.mb-showcase-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:30px}
+.mb-showcase-count{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;color:#6f7873;letter-spacing:.06em;white-space:nowrap}
+.mb-showcase-count b{color:var(--mb-lime);font-size:44px}
+.mb-showcase-track{display:flex;gap:22px;padding-left:max(20px,calc((100vw - var(--max)) / 2));padding-right:8vw;will-change:transform}
+.mb-shot{position:relative;flex:none;width:clamp(260px,30vw,430px);height:min(58vh,560px);border-radius:26px;overflow:hidden;background:#111;margin:0}
+.mb-shot.mb-wide{width:clamp(320px,46vw,680px)}
+.mb-shot img{width:100%;height:100%;object-fit:cover;scale:1.12;translate:var(--mb-sx,0px) 0;transition:scale .9s var(--mb-ease)}
+.mb-shot:hover img{scale:1.18}
+.mb-shot figcaption{position:absolute;left:16px;right:16px;bottom:16px;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 16px;border-radius:16px;background:rgba(8,10,10,.72);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.08)}
+.mb-shot figcaption strong{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;font-size:22px;line-height:1}
+.mb-shot figcaption span{color:var(--mb-lime);font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+.mb-shot-num{position:absolute;top:14px;left:18px;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:56px;line-height:1;color:transparent;-webkit-text-stroke:1.2px rgba(255,255,255,.55)}
+.mb-shot-cta{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:16px;padding:34px;background:linear-gradient(150deg,#141a12,#0b0d0e 60%);border:1px solid rgba(200,245,0,.25)}
+.mb-shot-cta strong{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;font-size:clamp(40px,4vw,58px);line-height:.92}
+.mb-shot-cta p{color:#aeb6b1;margin:0}
+.mb-showcase-bar{height:2px;background:rgba(255,255,255,.1);margin-top:30px;border-radius:2px;overflow:hidden}
+.mb-showcase-bar i{display:block;height:100%;background:var(--mb-lime);transform-origin:left;transform:scaleX(var(--mb-sp,0))}
+@media (max-width:900px),(hover:none){
+  .mb-showcase{height:auto}
+  .mb-showcase-sticky{position:relative;height:auto;padding:80px 0}
+  .mb-showcase-track{overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px;scrollbar-width:none;transform:none!important}
+  .mb-showcase-track::-webkit-scrollbar{display:none}
+  .mb-shot{scroll-snap-align:center;width:78vw;height:62vh;max-height:520px}
+  .mb-shot.mb-wide{width:86vw}
+  .mb-showcase-bar{display:none}
+}
+
+/* ---------- El taller en video ---------- */
+.mb-reels{padding:100px 0;background:linear-gradient(180deg,#f5f7f5,#fff)}
+.mb-reels-grid{display:grid;grid-template-columns:1fr auto;gap:60px;align-items:center}
+.mb-reels-phones{display:flex;gap:22px;align-items:flex-start}
+.mb-phone{position:relative;width:min(250px,38vw);aspect-ratio:9/16;border-radius:34px;padding:8px;background:#0b0d0e;box-shadow:0 30px 70px rgba(0,0,0,.22),0 0 0 1px rgba(0,0,0,.08)}
+.mb-phone:nth-child(2){margin-top:70px}
+.mb-phone video{width:100%;height:100%;object-fit:cover;border-radius:27px;display:block;background:#111}
+.mb-phone::after{content:"";position:absolute;top:16px;left:50%;width:62px;height:6px;margin-left:-31px;border-radius:6px;background:rgba(0,0,0,.65)}
+.mb-phone-tag{position:absolute;left:18px;bottom:18px;right:18px;display:flex;align-items:center;gap:8px;padding:9px 12px;border-radius:999px;background:rgba(8,10,10,.7);backdrop-filter:blur(6px);color:#fff;font-size:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.mb-phone-tag::before{content:"";width:8px;height:8px;border-radius:50%;background:#ff3b30;box-shadow:0 0 0 0 rgba(255,59,48,.6);animation:mbRec 1.6s ease infinite}
+@keyframes mbRec{0%{box-shadow:0 0 0 0 rgba(255,59,48,.6)}80%,100%{box-shadow:0 0 0 8px rgba(255,59,48,0)}}
+.mb-reels-points{display:grid;gap:14px;margin:26px 0 28px;padding:0;list-style:none}
+.mb-reels-points li{display:flex;gap:14px;align-items:flex-start;padding:16px 18px;border-radius:18px;background:#fff;border:1px solid #e7ebe6}
+.mb-reels-points li b{display:grid;place-items:center;flex:none;width:34px;height:34px;border-radius:50%;background:#0b0d0e;color:var(--mb-lime);font-size:12px}
+.mb-reels-points li span{font-size:14px;color:#4f5753}
+.mb-reels-points strong{display:block;color:#111;font-size:15px}
+@media (max-width:900px){
+  .mb-reels-grid{grid-template-columns:1fr;gap:40px}
+  .mb-reels-phones{justify-content:center}
+  .mb-phone{width:44vw}
+  .mb-anatomy-head,.mb-showcase-head{flex-direction:column;align-items:flex-start}
+  .mb-anatomy-panels{grid-template-columns:1fr}
+}
+
+/* ---------- Cursor personalizado (solo escritorio) ---------- */
+.mb-cursor,.mb-cursor-dot{position:fixed;left:0;top:0;z-index:2147482000;pointer-events:none;border-radius:50%;opacity:0;transition:opacity .3s ease}
+.mb-cursor{width:38px;height:38px;margin:-19px 0 0 -19px;border:1.5px solid rgba(160,202,0,.85);display:grid;place-items:center;
+  transition:opacity .3s ease,width .45s var(--mb-ease),height .45s var(--mb-ease),margin .45s var(--mb-ease),background .35s ease,border-color .35s ease}
+.mb-cursor-dot{width:6px;height:6px;margin:-3px 0 0 -3px;background:#9fc700}
+.mb-cursor-on .mb-cursor,.mb-cursor-on .mb-cursor-dot{opacity:1}
+.mb-cursor em{font-style:normal;font-size:11px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;color:#0b0d0b;opacity:0;transition:opacity .25s ease}
+.mb-cursor.is-link{width:60px;height:60px;margin:-30px 0 0 -30px;background:rgba(200,245,0,.12)}
+.mb-cursor.is-view{width:86px;height:86px;margin:-43px 0 0 -43px;background:var(--mb-lime);border-color:var(--mb-lime)}
+.mb-cursor.is-view em{opacity:1}
+.mb-cursor.is-view + .mb-cursor-dot{opacity:0}
+
+/* ---------- Transición entre páginas ---------- */
+.mb-wipe-page{position:fixed;inset:0;z-index:2147483002;pointer-events:none;background:var(--mb-dark);transform:translateY(100%)}
+.mb-wipe-page::after{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--mb-lime);box-shadow:0 0 18px var(--mb-lime)}
+.mb-wipe-page.is-out{transition:transform .55s cubic-bezier(.7,0,.3,1);transform:translateY(0)}
+html.mb-arrive::before{content:"";position:fixed;inset:0;z-index:2147483002;pointer-events:none;background:var(--mb-dark);animation:mbArrive .7s cubic-bezier(.7,0,.3,1) .05s forwards}
+@keyframes mbArrive{to{transform:translateY(-100%)}}
+
+@media (prefers-reduced-motion: reduce){
+  .mb-cursor,.mb-cursor-dot,.mb-wipe-page,html.mb-arrive::before{display:none!important}
+  .mb-showcase{height:auto!important}
+  .mb-showcase-sticky{position:relative;height:auto}
+  .mb-showcase-track{overflow-x:auto;transform:none!important}
+  .mb-hotspot{opacity:1;scale:1}
+}
+.mb-showcase.mb-sec-dark{overflow:visible}
+@media (max-width:900px){.mb-shot figcaption strong{font-size:18px}.mb-shot figcaption{flex-direction:column;align-items:flex-start;gap:4px}}
+/* permite secciones sticky sin perder el recorte horizontal */
+@supports (overflow:clip){html,body{overflow-x:clip!important;overflow-y:visible!important}}
